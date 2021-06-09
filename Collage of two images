@@ -1,0 +1,20 @@
+import cv2
+import numpy
+
+tree=cv2.resize(cv2.imread("tree.jpg"),(600,200))
+cv2.imshow('TREE_MAIN',tree)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+tree.shape
+
+down=cv2.resize(cv2.imread("down.jpg"),(600,200))
+cv2.imshow('Down_main',down)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+down.shape
+
+final_photo=numpy.vstack((tree, down ))
+cv2.imshow('Collage',final_photo)
+cv2.waitKey()
+cv2.destroyAllWindows()
+final_photo.shape

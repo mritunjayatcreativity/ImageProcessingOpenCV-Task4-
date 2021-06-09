@@ -1,0 +1,33 @@
+import cv2
+import numpy
+
+photo1 = cv2.imread("photo1.jpg")
+cv2.imshow("Photo1",photo1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+photo1.shape
+
+photo2=cv2.resize(cv2.imread("photo2.jpg"),(435, 492))
+cv2.imshow("Photo2", photo2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+photo2.shape
+
+photo3 = cv2.imread("photo1.jpg")
+cv2.waitKey()
+cv2.destroyAllWindows()
+photo3.shape
+
+crop1 = photo2[50:300, 100:350 ]
+photo1[50:300,100:350]=crop1
+cv2.imshow("SwapImg1" ,photo1)
+cv2.waitKey()
+cv2.destroyAllWindows()
+crop1.shape
+
+crop2 = photo3[50:300, 100:350]
+photo2[50:300,100:350]=crop2
+cv2.imshow("SwapImg2",photo2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+crop2.shape
